@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-800">
+    <div
+      class="max-w-md mt-10 py-6 text-white  bg-gradient-to-r from-purple-900 to-indigo-700 mx-auto rounded-lg shadow-2xl"
+    >
+      <div class="flex justify-center items-center">
+        <img src="image/Notion_app_logo.jpg" class="w-10 m-2" alt="">
+        <h1 class="text-3xl font-semibold">Notion Todo App</h1>
+      </div>
+
+      <hr class="my-6" />
+
+      <div id = "todosContainer" class="px-5 flex flex-col space-y-2">
+        <div class="flex justify-between items-center">
+          <h2>Duhur: sexo</h2>
+          <button class="bg-green-600 px-4 py-2 rounded">Done</button>
+        </div>
+        <div class="flex justify-between items-center">
+          <h2>Casar: Booga Qor</h2>
+          <button class="bg-green-600 px-4 py-2 rounded">Done</button>
+        </div>
+      </div>
+
+      <hr class="my-6">
+
+      <div class="px-5  flex space-x-2">
+
+        <input type="text" class="p-2 flex-1  text-gray-800 text-center rounded outline-none" placeholder="Add new Todo App">
+        <button onclick="handle()" class="bg-yellow-500 px-4 py-3 rounded hover:bg-yellow-600 transition-all">Done</button>
+      </div>
+    </div>
+
+
+    <script src="main.js"></script>
+  </body>
+</html>
