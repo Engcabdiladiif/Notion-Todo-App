@@ -8,6 +8,12 @@ function addTodo() {
     // so hel value inputka
     const value = inputElement.value;
 
+
+    if(value === '') {
+
+        return;
+    }
+
     const todocontainer = document.createElement('div');
     todocontainer.className  = 'flex justify-between items-center';
 
@@ -21,6 +27,7 @@ function addTodo() {
     const doneButton = document.createElement('button');
     doneButton.textContent = 'Done';
     doneButton.className = 'bg-green-400 p-2 rounded';
+    doneButton.onclick = markdone;
     
     // append todotile and doneButton in to todocontaner
 
@@ -35,4 +42,19 @@ function addTodo() {
 
     inputElement.value = '';
 
+
+}
+
+
+function markdone(event){
+
+
+    const ClickButton =  event.target;
+    ClickButton.className = 'hidden';
+
+
+    const todoitem = ClickButton.previousElementSibling;
+    todoitem.className = 'line-through'
+
+   
 }
